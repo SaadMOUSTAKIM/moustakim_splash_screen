@@ -34,18 +34,14 @@ public class MainActivity extends AppCompatActivity {
         EditText passwordtxt=(EditText)findViewById(R.id.passwordField);
         TextView usernametv=(TextView)findViewById(R.id.usernameV);
         TextView passwordtv=(TextView)findViewById(R.id.passwordV);
-        Intent myInent=new Intent(this,MainActivity2.class);
-        Bundle b=new Bundle();
-
-        b.putString("username",usernametxt.getText().toString());
-
-        b.putString("password",passwordtxt.getText().toString());
-
-        b.putString("tvusername",usernametv.getText().toString());
-
-        b.putString("tvpassword",passwordtv.getText().toString());
-        myInent.putExtras(b);
-        startActivity(myInent);
+        Intent Intent=new Intent(this,MainActivity2.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("username",usernametxt.getText().toString());
+        bundle.putString("password",passwordtxt.getText().toString());
+        bundle.putString("tvusername",usernametv.getText().toString());
+        bundle.putString("tvpassword",passwordtv.getText().toString());
+        Intent.putExtras(bundle);
+        startActivity(Intent);
     }
 
 }

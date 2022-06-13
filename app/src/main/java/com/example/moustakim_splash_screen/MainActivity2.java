@@ -13,17 +13,17 @@ public class MainActivity2 extends AppCompatActivity {
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main2);
-    TextView txtv1= (TextView) findViewById(R.id.textView1);
-    TextView txtv2= (TextView) findViewById(R.id.textView2);
-    TextView txtv3= (TextView) findViewById(R.id.textView4);
+    TextView txtView1= (TextView) findViewById(R.id.textView1);
+    TextView txtView2= (TextView) findViewById(R.id.textView2);
+    TextView txtView3= (TextView) findViewById(R.id.textView4);
     Bundle b=getIntent().getExtras();
     String user=b.getString( "username");
     String pass=b.getString("password" );
     String usertv=b.getString("tvusername" );
     String passtv=b.getString("tvpassword" );
-    txtv1.setText(txtv1.getText());
-    txtv2.setText(usertv + user);
-    txtv3.setText(passtv + pass);
+    txtView1.setText(txtView1.getText());
+    txtView2.setText(usertv + user);
+    txtView3.setText(passtv + pass);
     Button button2=findViewById(R.id.button2);
     View view=null;
     button2.setOnClickListener(new View.OnClickListener()
@@ -35,7 +35,7 @@ protected void onCreate(Bundle savedInstanceState) {
     });
 }
     public void retour(View view){
-        Intent myIntent2=new Intent(this,MainActivity.class);
-        startActivity(myIntent2);
+        Intent Intent2=new Intent(this,MainActivity.class);
+        startActivity(Intent2);
     }
 }
